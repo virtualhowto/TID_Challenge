@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TID Challenge</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TID Challenge</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Add QR Scanner Library -->
+  <script src="https://unpkg.com/html5-qrcode"></script>
 </head>
 <body>
 
 <div id="app">
 
-    <div id="start-screen" class="screen">
-        <h1>TID Challenge</h1>
-        <p>Enter Box ID:</p>
-        <input type="text" id="boxIdInput" placeholder="Enter Box ID here">
-        <button onclick="startChallenge()">Start</button>
-    </div>
+  <div id="start-screen" class="screen">
+    <h1>TID Challenge</h1>
+    <p>Scan QR Code or Enter Box ID:</p>
 
-    <div id="guess-screen" class="screen hidden">
-        <h2>Guess What's in the Box!</h2>
-        <input type="text" id="guessInput" placeholder="Enter your guess">
-        <button onclick="submitGuess()">Submit Guess</button>
-        <div id="hint-container" class="hidden">
-            <h3>Hint:</h3>
-            <video id="hintVideo" width="300" controls></video>
-        </div>
-    </div>
+    <div id="qr-reader" style="width:300px; margin:auto;"></div>
+    <p>Or manually enter:</p>
+    <input type="text" id="boxIdInput" placeholder="Enter Box ID">
+    <button onclick="startChallenge()">Start</button>
+  </div>
 
-    <div id="success-screen" class="screen hidden">
-        <h2>Correct!</h2>
-        <img id="itemImage" src="" alt="Item" width="300">
-        <p id="itemDescription"></p>
+  <div id="guess-screen" class="screen hidden">
+    <h2>Guess What's in the Box!</h2>
+    <input type="text" id="guessInput" placeholder="Enter your guess">
+    <button onclick="submitGuess()">Submit Guess</button>
+    <div id="hint-container" class="hidden">
+      <h3>Hint:</h3>
+      <video id="hintVideo" width="300" controls></video>
     </div>
+  </div>
+
+  <div id="success-screen" class="screen hidden">
+    <h2>Correct!</h2>
+    <img id="itemImage" src="" alt="Item" width="300">
+    <p id="itemDescription"></p>
+  </div>
 
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
