@@ -1,0 +1,18 @@
+{
+  "boxes": [
+    {
+      "id": "123",
+      "acceptedAnswers": ["silver coin", "coin", "silver"],
+      "hintVideo": "https://your-storage-link/hint123.mp4",
+      "itemImage": "https://your-storage-link/item123.jpg",
+      "description": "A 1920s silver coin, common around old homesteads."
+    },
+    {
+      "id": "456",
+      "acceptedAnswers": ["rusty nail", "nail"],
+      "hintVideo": "https://your-storage-link/hint456.mp4",
+      "itemImage": "https://your-storage-link/item456.jpg",
+      "description": "An old iron nail from fencing posts."
+    }
+  ]
+}
